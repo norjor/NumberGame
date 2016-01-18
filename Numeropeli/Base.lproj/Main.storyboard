@@ -17,27 +17,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="1...10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-Pl-nbO">
-                                <rect key="frame" x="158" y="227" width="154" height="68"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Guessing Game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvA-rG-0Mg">
+                                <rect key="frame" x="137" y="80" width="326" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Xg9-zi-gtp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg6-aW-I9J">
+                                <rect key="frame" x="188" y="158" width="225" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UFJ-CA-3I3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="1...10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-Pl-nbO">
+                                <rect key="frame" x="223" y="262" width="154" height="68"/>
                                 <color key="backgroundColor" red="0.64349989183584677" green="0.75" blue="0.65928228593136962" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="6x7-xR-WlT"/>
+                                    <constraint firstAttribute="width" constant="154" id="Xoz-Aw-7Ac"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="MyUITextFieldInputNumber:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="mba-1w-Haa"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Numeroarvauspeli" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvA-rG-0Mg">
-                                <rect key="frame" x="158" y="123" width="154" height="67"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVu-M0-1bZ">
-                                <rect key="frame" x="185" y="340" width="101" height="61"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
-                                <state key="normal" title="Start">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVu-M0-1bZ">
+                                <rect key="frame" x="225" y="375" width="150" height="61"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Iqw-qN-kGl"/>
+                                    <constraint firstAttribute="height" constant="61" id="d0s-FR-xGY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Start new game">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="MyUIButtonStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="43u-iG-t8P"/>
@@ -45,10 +65,29 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.65528393395729356" green="1" blue="0.86023483983343141" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FvA-rG-0Mg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Hy-hx-Gu1"/>
+                            <constraint firstItem="rg6-aW-I9J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NnK-pg-n5O"/>
+                            <constraint firstItem="rg6-aW-I9J" firstAttribute="top" secondItem="FvA-rG-0Mg" secondAttribute="bottom" constant="18" id="Ofy-qV-0JB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MVu-M0-1bZ" secondAttribute="bottom" constant="8" symbolic="YES" id="QyT-Qn-ze2"/>
+                            <constraint firstItem="MVu-M0-1bZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TT5-i7-alW"/>
+                            <constraint firstItem="MVu-M0-1bZ" firstAttribute="top" secondItem="1w3-Pl-nbO" secondAttribute="bottom" constant="45" id="WrQ-ad-MoN"/>
+                            <constraint firstItem="1w3-Pl-nbO" firstAttribute="top" secondItem="rg6-aW-I9J" secondAttribute="bottom" constant="54" id="cub-ll-djm"/>
+                            <constraint firstItem="1w3-Pl-nbO" firstAttribute="top" secondItem="FvA-rG-0Mg" secondAttribute="bottom" constant="55" id="jEI-kD-Dqa"/>
+                            <constraint firstItem="FvA-rG-0Mg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="jaN-4R-VQD"/>
+                            <constraint firstItem="1w3-Pl-nbO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kFI-TU-kcz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jEI-kD-Dqa"/>
+                                <exclude reference="QyT-Qn-ze2"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="MyIULabelInfo" destination="FvA-rG-0Mg" id="9Un-Qc-1qU"/>
                         <outlet property="MyUITextFieldShowNumber" destination="1w3-Pl-nbO" id="Pbg-ca-nNr"/>
+                        <outlet property="SubLabel" destination="rg6-aW-I9J" id="aOu-FX-hS2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

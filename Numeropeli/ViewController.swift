@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var MyIULabelInfo: UILabel!
     
+    @IBOutlet weak var SubLabel: UILabel!
     
     @IBOutlet weak var MyUITextFieldShowNumber: UITextField!
     
@@ -36,17 +37,17 @@ class ViewController: UIViewController {
                 
                 if (MyGuess < YourGuess)
                 {
-                    MyIULabelInfo.text = "Anna pienempi kuin " + YourGuessAsString;
+                    SubLabel.text = "Give smaller than " + YourGuessAsString;
                 }
                 else if (MyGuess > YourGuess)
                 {
-                    MyIULabelInfo.text = "Anna suurempi kuin " + YourGuessAsString;
+                    SubLabel.text = "Give bigger than " + YourGuessAsString;
                 }
                 else
                 {
                     let GuessesAsStr = String(Guesses);
-                    MyIULabelInfo.text = YourGuessAsString + " on oikein\n\nArvasit " +
-                        GuessesAsStr + " kertaa";
+                    MyIULabelInfo.text = YourGuessAsString + " is right!";
+                    SubLabel.text = "You guessed " + GuessesAsStr + " times";
                     Guesses = 0;
                 }
 
@@ -54,7 +55,7 @@ class ViewController: UIViewController {
                 
             default:
                 
-                MyIULabelInfo.text = "Anna numero väliltä 1-10"
+                SubLabel.text = "Give a number between 1-10"
                 MyUITextFieldShowNumber.text = ""
                 
                 break;
@@ -62,7 +63,8 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func MyUIButtonStart(sender: UIButton) {
-        MyIULabelInfo.text = "Anna numero väliltä 1-10"
+        MyIULabelInfo.text = "Number Guessing Game"
+        SubLabel.text = "Give a number between 1-10"
         MyUITextFieldShowNumber.text = ""
         MyGuess = Int(arc4random_uniform(10)) + 1;
     }
