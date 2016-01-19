@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Numeropeli
 //
-//  Created by Koulutus on 05/12/15.
-//  Copyright © 2015 Koulutus. All rights reserved.
+//  Created by Koulutus on 19/01/16.
+//  Copyright © 2016 Koulutus. All rights reserved.
 //
 
 import UIKit
